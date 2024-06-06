@@ -1,0 +1,71 @@
+/* ↓↓ Global variables accessible throughout stylesheet ↓↓ */
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-txt: #333333;
+  --clr-porcelain: #ecf1f2;
+  --burger-transition: 300ms;
+}
+
+/* ↓↓ Remove default styles across all elements ↓↓ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  /* ↓↓ Include borders, paddings sizes in width calculation. i.e Element is not larger than fixed width size ↓↓ */
+  box-sizing: border-box;
+}
+
+body,
+html {
+  color: var(--clr-txt);
+  background: var(--clr-porcelain);
+}
+
+
+.header{
+    background: var(--clr-white);
+    display: flex;
+    padding: 0.625rem 1.25rem;
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.burger-line{
+    color: var(--clr-txt);
+    transition: 
+        y var(--burger-transition) ease-in,
+        transform var(--burger-transition) ease-in
+    ;
+    transform-origin: center;
+}
+
+
+.mobile-menu-icon[aria-expanded="true"] :is(.top, .bottom){
+    y: 11;
+}
+.mobile-menu-icon[aria-expanded="true"] .top{
+    transform: rotate(45deg);
+}
+.mobile-menu-icon[aria-expanded="true"] .middle{
+    transform: rotate(45deg);
+    opacity: 0;
+}
+.mobile-menu-icon[aria-expanded="true"] .bottom{
+    transform: rotate(-45deg);
+}
+
+
+.site-logo img{
+    width: 40px;
+    height: 40px;
+}

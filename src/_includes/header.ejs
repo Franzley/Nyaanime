@@ -1,0 +1,51 @@
+<!-- Header Start -->
+<header class="header container">
+    <button
+      class="mobile-menu-icon"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >
+      <svg fill="currentColor" class="hamburger" viewbox="0 0 24 24" width="24">
+        <rect
+          class="burger-line top"
+          width="20"
+          height="2.4"
+          x="2.4"
+          y="5"
+          rx="1.2"
+        ></rect>
+        <rect
+          class="burger-line middle"
+          width="20"
+          height="2.4"
+          x="2.4"
+          y="11"
+          rx="1.2"
+        ></rect>
+        <rect
+          class="burger-line bottom"
+          width="20"
+          height="2.4"
+          x="2.4"
+          y="16.6"
+          rx="1.2"
+        ></rect>
+      </svg>
+    </button>
+    <a href="/" class="site-logo"><img src="../images/CPU_Memory.png" alt=""></a>
+</header>
+<!-- Header End -->
+
+
+<script defer>
+    const mobileNav = document.querySelector(".mobile-menu-icon");
+    
+    mobileNav.addEventListener("click", ()=>{
+        const isOpened = mobileNav.getAttribute('aria-expanded')
+        if (isOpened === 'false'){
+            mobileNav.setAttribute('aria-expanded', 'true')
+        }else{
+            mobileNav.setAttribute('aria-expanded', 'false')
+        }
+    })
+</script>
