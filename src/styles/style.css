@@ -21,6 +21,36 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  color: var(--clr-txt);
+  background: var(--clr-white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    /* ↓↓ Prevents element from being selected in highlighting ↓↓ */
+    user-select: none;
+}
+
+.container{
+  border: 1px solid red;
+  width: 100%;
+  max-width: 500px;
+  --padding: 1.25rem;
+  padding: 0 var(--padding);
+  margin: auto;
+}
+
 a {
   color: var(--clr-txt);
   text-decoration: underline;
@@ -28,21 +58,6 @@ a {
 }
 a:hover {
   color: var(--clr-cornflower);
-}
-
-body,
-html {
-  color: var(--clr-txt);
-  background: var(--clr-white);
-}
-
-.header {
-  background: var(--clr-white);
-}
-.navigation {
-  display: flex;
-  padding: 10px 20px;
-  gap: 1rem;
 }
 
 .icon {
@@ -54,6 +69,21 @@ html {
 .icon svg {
   width: 24px;
   color: var(--clr-black);
+}
+
+.header {
+  background: var(--clr-white);
+}
+.navigation {
+  display: flex;
+  padding: 10px 0;
+  gap: 1rem;
+}
+
+.utils {
+  display: flex;
+  margin-left: auto;
+  gap: 0.5rem;
 }
 
 .burger-line {
@@ -75,14 +105,35 @@ html {
   transform: rotate(-45deg);
 }
 
+.cart-icon{
+  position: relative;
+}
+.cart-count{
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  box-sizing: content-box;
+  min-width: 1em;
+  padding: 2px;
+  font-size: 11px;
+  line-height: 1em;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--clr-black);
+  color: var(--clr-white);
+}
+
 .site-logo img {
   width: 40px;
   height: 40px;
 }
 
 .search-bar {
+  width: auto;
+  margin: 0 calc(var(--padding) * -1);
   background: var(--clr-porcelain);
   padding: 10px 15px;
+  display: flex;
 }
 .search-bar input {
   background: transparent;
@@ -95,34 +146,6 @@ html {
 ::placeholder {
   color: var(--clr-txt);
   opacity: 0.8;
-}
-
-.utils {
-  display: flex;
-  margin-left: auto;
-  gap: 0.5rem;
-}
-
-.search-bar {
-  display: flex;
-}
-
-.cart-icon{
-    position: relative;
-}
-.cart-count{
-    position: absolute;
-    top: 4px;
-    right: -2px;
-    box-sizing: content-box;
-    min-width: 1em;
-    padding: 2px;
-    font-size: 11px;
-    line-height: 1em;
-    text-align: center;
-    border-radius: 50%;
-    background: var(--clr-black);
-    color: var(--clr-white);
 }
 
 
