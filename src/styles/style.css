@@ -42,10 +42,11 @@ html {
   line-height: 1.5;
   font-size: var(--size-xxs);
   color: blue;
+  min-width: 320px;
 }
 
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   --padding: 1.25rem;
   padding: 0 var(--padding);
