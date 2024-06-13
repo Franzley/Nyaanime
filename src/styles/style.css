@@ -17,6 +17,8 @@
   --size-2xl: 1.75rem;
   --size-3xl: 2rem;
   --size-4xl: 2.5rem;
+
+  scroll-behavior: smooth;
 }
 
 /* ↓↓ Remove default styles across all elements ↓↓ */
@@ -40,13 +42,35 @@ html {
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
-  font-size: var(--size-xxs);
-  color: blue;
+  font-size: 100%;
   min-width: 320px;
 }
 
+strong {
+  color: var(--clr-cornflower);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  /* ↓↓ Prevents element from being selected in highlighting ↓↓ */
+  user-select: none;
+}
+
+a {
+  color: var(--clr-txt);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--clr-cornflower);
+}
+
 .container {
-  /* border: 1px solid red; */
   width: 100%;
   --padding: 1.25rem;
   padding: 0 var(--padding);
@@ -72,27 +96,6 @@ h6 {
   font-size: var(--size-xs);
 }
 
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-  /* ↓↓ Prevents element from being selected in highlighting ↓↓ */
-  user-select: none;
-}
-
-a {
-  color: var(--clr-txt);
-  text-decoration: underline;
-  transition: var(--transition);
-}
-a:hover {
-  color: var(--clr-cornflower);
-}
-
 .icon {
   background: transparent;
   padding: 8px;
@@ -104,10 +107,23 @@ a:hover {
   color: var(--clr-black);
 }
 
-.header {
+.navigation {
   background: var(--clr-white);
 }
-.navigation {
+
+.window-scroll .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 1px 5px #2b2929;
+  z-index: 101;
+}
+.window-scroll .search-bar {
+  margin-top: 60px;
+}
+
+nav {
   display: flex;
   padding: 10px 0;
   gap: 1rem;
@@ -187,74 +203,24 @@ a:hover {
   opacity: 0.8;
 }
 
+.hero .container {
+  text-align: center;
+}
+
+.content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 5rem;
+}
+.content img{
+  border-radius: 15px;
+}
+
 footer {
   background: linear-gradient(
     89deg,
     #ebf5fa 12% 49%,
     var(--clr-porcelain) 85.612%
   );
-}
-
-
-
-
-@media (min-width: 480px) {
-  body,
-  html {
-    font-size: var(--size-sm);
-    color: red;
-  }
-
-  h1 {
-    font-size: var(--size-3xl);
-  }
-  h2 {
-    font-size: var(--size-2xl);
-  }
-  h3 {
-    font-size: var(--size-xl);
-  }
-  h4 {
-    font-size: var(--size-lg);
-  }
-  h5 {
-    font-size: var(--size-base);
-  }
-  h6 {
-    font-size: var(--size-sm);
-  }
-}
-@media (min-width: 768px) {
-  body,
-  html {
-    font-size: var(--size-base);
-    color: pink;
-  }
-
-  .container {
-    --padding: 1.875rem;
-  }
-
-  h1 {
-    font-size: var(--size-4xl);
-  }
-  h2 {
-    font-size: var(--size-3xl);
-  }
-  h3 {
-    font-size: var(--size-2xl);
-  }
-  h4 {
-    font-size: var(--size-xl);
-  }
-  h5 {
-    font-size: var(--size-lg);
-  }
-  h6 {
-    font-size: var(--size-base);
-  }
-
-  .search-bar .icon {
-    padding-left: 14px;
-  }
 }
