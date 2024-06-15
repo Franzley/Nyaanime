@@ -210,11 +210,56 @@ nav {
 .content{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1.25rem;
   margin-bottom: 5rem;
 }
 .content img{
   border-radius: 15px;
+}
+
+/* .hp-test{
+  max-width: 330px;
+  max-height: 330px;
+  width: 100%;
+  height: 100%;
+} */
+
+.merchandise{
+  text-align: center;
+}
+
+.mobile-menu{
+  position: absolute;
+  background: var(--clr-white);
+  z-index: 1000;
+  left: 0;
+  top: 60px;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid rgb(231, 225, 225);
+  padding-top: 1rem;
+  display: none;
+  position: fixed;
+  overflow: scroll;
+}
+
+.mobile-menu-item{
+  border-bottom: 1px solid rgb(231, 225, 225);
+}
+.mobile-menu-item a{
+  position: relative;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.mobile-nav-open{
+  overflow: hidden;
+}
+.mobile-nav-open .mobile-menu{
+  display: block;
 }
 
 footer {

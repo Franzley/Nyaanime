@@ -1,11 +1,15 @@
 ---
 title: Nyaanime Shop Anime Merch
 layout: "base.ejs"
+tags: cat
 ---
 
 <section class="hero">
   <picture>
-    <source srcset="./images/hero-image-2560.webp" media="(min-width: 1440px)" />
+    <source
+      srcset="./images/hero-image-2560.webp"
+      media="(min-width: 1440px)"
+    />
     <source srcset="./images/hero-image-1440.webp" media="(min-width: 800px)" />
     <img
       src="./images/hero-image-800.webp"
@@ -14,24 +18,25 @@ layout: "base.ejs"
       decoding="async"
     />
   </picture>
-  
+
   <div class="container">
-    <h1>Unleash Your <br> Inner Otaku <br></h1>
+    <h1>
+      Unleash Your <br />
+      Inner Otaku <br />
+    </h1>
     <h3><strong>Shop Now</strong></h3>
   </div>
 </section>
 
 <section class="content container">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
-<img src="./images/Herrscher_Of_The_Void_Figure.webp" alt="">
+  <% for (let i=0; i<12; i++){ %>
+    <a class="merchandise" href="#">
+      <img
+      class="hp-test"
+      src="./images/Herrscher_Of_The_Void_Figure.webp"
+      alt=""
+    />
+    Figures
+    </a>
+  <%}%>
 </section>

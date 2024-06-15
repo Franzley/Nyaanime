@@ -92,6 +92,19 @@
 </header>
 <!-- Header End -->
 
+<div class="mobile-menu container">
+  
+  <ul>
+    <li class="mobile-menu-item"><a href="#">Figure</a></li>
+    <li class="mobile-menu-item"><a href="#">Apparel</a></li>
+    <li class="mobile-menu-item"><a href="#">Accessories</a></li>
+    <li class="mobile-menu-item"><a href="#">Life Style</a></li>
+    <% for (let i=0; i<12; i++){ %>
+    <li class="mobile-menu-item"><a href="#">Life Style</a></li>
+    <%}%>
+  </ul>
+</div>
+
 <script defer>
   const mobileNavIcon = document.querySelector(".mobile-menu-icon");
 
@@ -99,8 +112,10 @@
     const isOpened = mobileNavIcon.getAttribute("aria-expanded");
     if (isOpened === "false") {
       mobileNavIcon.setAttribute("aria-expanded", "true");
+      document.body.classList.toggle("mobile-nav-open")
     } else {
       mobileNavIcon.setAttribute("aria-expanded", "false");
+      document.body.classList.toggle("mobile-nav-open")
     }
   });
 
