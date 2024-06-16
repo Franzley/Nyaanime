@@ -239,10 +239,10 @@ nav {
 }
 
 /* When burger is clicked, disable webpage scrolling and open the mobile menu */
-.mobile-nav-open {
+.mobile-menu-open {
   overflow: hidden;
 }
-.mobile-nav-open .mobile-menu {
+.mobile-menu-open .mobile-menu {
   display: block;
 }
 
