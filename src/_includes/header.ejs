@@ -1,40 +1,7 @@
-<!-- Header Start -->
+<%# Header Start %>
 <header>
   <div class="navigation container">
     <nav>
-      <%# Burger %>
-      <button
-        class="icon mobile-menu-icon"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-      >
-        <svg fill="currentColor" viewbox="0 0 24 24">
-          <rect
-            class="burger-line top"
-            width="20"
-            height="2.4"
-            x="2.4"
-            y="5"
-            rx="1.2"
-          ></rect>
-          <rect
-            class="burger-line middle"
-            width="20"
-            height="2.4"
-            x="2.4"
-            y="11"
-            rx="1.2"
-          ></rect>
-          <rect
-            class="burger-line bottom"
-            width="20"
-            height="2.4"
-            x="2.4"
-            y="16.6"
-            rx="1.2"
-          ></rect>
-        </svg>
-      </button>
       <%# Logo %>
       <a href="/" class="site-logo">
         <img src="../images/logo.png" alt="site-logo" />
@@ -70,6 +37,39 @@
           </svg>
         </a>
       </div>
+      <%# Burger %>
+      <button
+        class="icon mobile-menu-icon"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <svg fill="currentColor" viewbox="0 0 24 24">
+          <rect
+            class="burger-line top"
+            width="20"
+            height="2.4"
+            x="2.4"
+            y="5"
+            rx="1.2"
+          ></rect>
+          <rect
+            class="burger-line middle"
+            width="20"
+            height="2.4"
+            x="2.4"
+            y="11"
+            rx="1.2"
+          ></rect>
+          <rect
+            class="burger-line bottom"
+            width="20"
+            height="2.4"
+            x="2.4"
+            y="16.6"
+            rx="1.2"
+          ></rect>
+        </svg>
+      </button>
     </nav>
   </div>
 
@@ -90,10 +90,9 @@
     <input type="text" placeholder="Search our store" />
   </form>
 </header>
-<!-- Header End -->
+<%# Header End %>
 
 <div class="mobile-menu container">
-  
   <ul>
     <li class="mobile-menu-item"><a href="#">Figure</a></li>
     <li class="mobile-menu-item"><a href="#">Apparel</a></li>
@@ -112,10 +111,10 @@
     const isOpened = mobileNavIcon.getAttribute("aria-expanded");
     if (isOpened === "false") {
       mobileNavIcon.setAttribute("aria-expanded", "true");
-      document.body.classList.toggle("mobile-nav-open")
+      document.body.classList.toggle("mobile-nav-open");
     } else {
       mobileNavIcon.setAttribute("aria-expanded", "false");
-      document.body.classList.toggle("mobile-nav-open")
+      document.body.classList.toggle("mobile-nav-open");
     }
   });
 

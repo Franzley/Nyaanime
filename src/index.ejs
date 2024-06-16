@@ -5,6 +5,7 @@ tags: cat
 ---
 
 <section class="hero">
+  <%# When page reaches certain breakpoints, change image resolution %>
   <picture>
     <source
       srcset="./images/hero-image-2560.webp"
@@ -28,15 +29,16 @@ tags: cat
   </div>
 </section>
 
+<%# Merchandise section %>
 <section class="content container">
   <% for (let i=0; i<12; i++){ %>
-    <a class="merchandise" href="#">
-      <img
+  <a class="merchandise" href="#">
+    <img
       class="hp-test"
       src="./images/Herrscher_Of_The_Void_Figure.webp"
       alt=""
     />
     Figures
-    </a>
+  </a>
   <%}%>
 </section>
