@@ -1,15 +1,15 @@
 <%# Header Start %>
 <header>
-  <div class="navigation container">
-    <nav>
+  <div id="navigation" class="container">
+    <nav aria-label="navbar">
       <%# Logo %>
-      <a href="/" class="site-logo">
+      <a href="/" class="site-logo" aria-label="Go to homepage">
         <img src="../images/logo.webp" alt="site-logo" />
       </a>
-      <%# Util Icons %>
+      <%# Utility Icons %>
       <div class="utils">
         <%# Account %>
-        <a class="icon" href="#" aria-label="User Profile">
+        <a class="icon" href="#" aria-label="Go to User Profile">
           <svg
             fill="none"
             stroke="currentColor"
@@ -23,7 +23,7 @@
           </svg>
         </a>
         <%# Cart %>
-        <a class="icon cart-icon" href="../cart/">
+        <a class="icon cart-icon" href="../cart/" aria-label="Go to cart">
           <svg
             fill="none"
             stroke="currentColor"
@@ -42,7 +42,7 @@
         class="icon mobile-menu-icon"
         aria-expanded="false"
         aria-controls="mobile-nav"
-        aria-label="Mobile Menu"
+        aria-label="Open the Mobile Menu Drawer"
       >
         <svg fill="currentColor" viewbox="0 0 24 24">
           <rect
