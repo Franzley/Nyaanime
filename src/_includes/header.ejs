@@ -4,12 +4,12 @@
     <nav>
       <%# Logo %>
       <a href="/" class="site-logo">
-        <img src="../images/logo.png" alt="site-logo" />
+        <img src="../images/logo.webp" alt="site-logo" />
       </a>
       <%# Util Icons %>
       <div class="utils">
         <%# Account %>
-        <a class="icon" href="#">
+        <a class="icon" href="#" aria-label="User Profile">
           <svg
             fill="none"
             stroke="currentColor"
@@ -42,6 +42,7 @@
         class="icon mobile-menu-icon"
         aria-expanded="false"
         aria-controls="mobile-nav"
+        aria-label="Mobile Menu"
       >
         <svg fill="currentColor" viewbox="0 0 24 24">
           <rect
@@ -75,7 +76,9 @@
 
   <%# Search Bar %>
   <form class="search-bar">
-    <button class="icon">
+    <button 
+    class="icon"
+    aria-label="Search Button">
       <svg
         fill="none"
         stroke="currentColor"
@@ -92,15 +95,18 @@
 </header>
 <%# Header End %>
 
-<div class="mobile-menu container">
-  <ul>
-    <li class="mobile-menu-item"><a href="#">Figure</a></li>
-    <li class="mobile-menu-item"><a href="#">Apparel</a></li>
-    <li class="mobile-menu-item"><a href="#">Accessories</a></li>
-    <li class="mobile-menu-item"><a href="#">Life Style</a></li>
-    <% for (let i=0; i<12; i++){ %>
-    <li class="mobile-menu-item"><a href="#">Life Style</a></li>
-    <%}%>
+<div class="mobile-drawer container">
+  <ul class="mobile-drawer-list">
+    <li class="mobile-drawer-list__item">
+      <a href="#">Figure</a>
+      <ul class="mobile-drawer-sublist">
+        <li class="mobile-drawer-list__item"><a href="">Pre-Order</a></li>
+        <li class="mobile-drawer-list__item"><a href="">In-Stock</a></li>
+      </ul>
+    </li>
+    <li class="mobile-drawer-list__item"><a href="#">Apparel</a></li>
+    <li class="mobile-drawer-list__item"><a href="#">Accessories</a></li>
+    <li class="mobile-drawer-list__item"><a href="#">Life Style</a></li>
   </ul>
 </div>
 
@@ -111,10 +117,10 @@
     const isOpened = mobileNavIcon.getAttribute("aria-expanded");
     if (isOpened === "false") {
       mobileNavIcon.setAttribute("aria-expanded", "true");
-      document.body.classList.toggle("mobile-menu-open");
+      document.body.classList.toggle("mobile-drawer-open");
     } else {
       mobileNavIcon.setAttribute("aria-expanded", "false");
-      document.body.classList.toggle("mobile-menu-open");
+      document.body.classList.toggle("mobile-drawer-open");
     }
   });
 
