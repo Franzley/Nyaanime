@@ -7,13 +7,13 @@ tags: cat
 <section class="hero">
   <%# When page reaches certain breakpoints, change image resolution %>
   <picture>
+    <source srcset="./images/hero-image-800.webp" media="(max-width: 800px)" />
     <source
-      srcset="./images/hero-image-2560.webp"
-      media="(min-width: 1440px)"
+      srcset="./images/hero-image-1440.webp"
+      media="(max-width: 1440px)"
     />
-    <source srcset="./images/hero-image-1440.webp" media="(min-width: 800px)" />
     <img
-      src="./images/hero-image-800.webp"
+      src="./images/hero-image-2560.webp"
       alt="landing image"
       width="2536"
       height="936"
@@ -35,14 +35,18 @@ tags: cat
 <section class="content container">
   <% for (let i=0; i<12; i++){ %>
   <a class="merchandise" href="#">
+  <picture>
+    <source srcset="./images/Herrscher_Of_The_Void_Figure400.webp" media="(max-width: 800px)" />
     <img
       class="hp-test"
-      src="./images/Herrscher_Of_The_Void_Figure.webp"
+      src="./images/Herrscher_Of_The_Void_Figure800.webp"
       alt=""
       width="800"
       height="800"
       loading="lazy"
     />
+  </picture>
+
     Figures
   </a>
   <%}%>
