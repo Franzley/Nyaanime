@@ -9,6 +9,7 @@
   --clr-txt: #333333;
   --clr-Lipstick: #B00352;
   --clr-porcelain: #ecf1f2;
+  --clr-cornflower: #8AB5EA;
   --transition: 300ms;
 
   --size-xxs: 0.8125rem;
@@ -202,7 +203,7 @@ nav {
   width: 100%;
 }
 .search-bar input {
-  outline-color: var(--clr-Lipstick);
+  outline-color: var(--clr-cornflower);
 }
 ::placeholder {
   color: var(--clr-txt);
