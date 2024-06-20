@@ -210,6 +210,10 @@ nav {
   opacity: 0.8;
 }
 
+/******************************/
+/*******  Mobile-Drawer *******/
+/******************************/
+
 /* Mobile menu when burger is clicked */
 .mobile-drawer {
   position: absolute;
@@ -252,6 +256,19 @@ nav {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+/* When burger is clicked, disable webpage scrolling and open the mobile menu */
+.mobile-drawer-open {
+  overflow: hidden;
+}
+.mobile-drawer-open .mobile-drawer {
+  display: block;
+}
+
+/******************************/
+/*********  Accordion *********/
+/******************************/
+
 .accordion-trigger {
   position: relative;
 }
@@ -271,14 +288,6 @@ nav {
 /* Rotate arrow */
 .accordion svg {
   transform: rotate(180deg);
-}
-
-/* When burger is clicked, disable webpage scrolling and open the mobile menu */
-.mobile-drawer-open {
-  overflow: hidden;
-}
-.mobile-drawer-open .mobile-drawer {
-  display: block;
 }
 
 /******************************/
