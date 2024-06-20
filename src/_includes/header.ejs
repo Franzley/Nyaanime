@@ -41,7 +41,7 @@
       <button
         class="icon mobile-menu-icon"
         aria-expanded="false"
-        aria-controls="mobile-nav"
+        aria-controls="mobile-drawer"
         aria-label="Open the Mobile Menu Drawer"
       >
         <svg fill="currentColor" viewbox="0 0 24 24">
@@ -101,10 +101,11 @@
       ["Figures", ["Pre-Order", "In-Stock"]],
       ["Apparel", ["Clothing", "Bags", "Shoes"]],
       ["Accessories", ["Earrings", "Necklase"]],
-      ["Collectibles", ["Acrylics", "Keychains", "Plushies"]]
+      ["Collectibles", ["Acrylics", "Keychains", "Plushies"]],
     ],
     className: "mobile-drawer-list",
     itemClassName: "mobile-drawer-list__item",
-    sublistClassName: "mobile-drawer-sublist"
+    sublistClassName: "mobile-drawer-sublist",
+    isAccordion: true,
   })  %>
 </div>

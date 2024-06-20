@@ -7,9 +7,9 @@
   --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-txt: #333333;
-  --clr-Lipstick: #B00352;
+  --clr-Lipstick: #b00352;
   --clr-porcelain: #ecf1f2;
-  --clr-cornflower: #8AB5EA;
+  --clr-cornflower: #8ab5ea;
   --transition: 300ms;
 
   --size-xxs: 0.8125rem;
@@ -221,6 +221,7 @@ nav {
   width: 100%;
   border-top: 1px solid rgb(231, 225, 225);
   padding-top: 0.375rem;
+  padding-bottom: 1.25rem;
   display: none;
   position: fixed;
   overflow: scroll;
@@ -228,6 +229,8 @@ nav {
 
 .mobile-drawer-list__item {
   border-bottom: 1px solid rgb(231, 225, 225);
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 .mobile-drawer-list__item a {
   position: relative;
@@ -240,6 +243,34 @@ nav {
 .mobile-drawer-sublist .mobile-drawer-list__item {
   border-bottom: none;
   padding-left: 15px;
+}
+/* Hide extra lists until user clicks arrow button */
+.mobile-drawer-sublist {
+/* Take up the full width of grid */
+  grid-column: span 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-trigger {
+  position: relative;
+}
+.accordion-trigger::before {
+  content: "";
+  border-left: 1px solid rgb(177, 170, 170);
+  position: absolute;
+  left: 0;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion-trigger svg {
+  transition: var(--transition);
+  transform-origin: center;
+}
+/* Rotate arrow */
+.accordion svg {
+  transform: rotate(180deg);
 }
 
 /* When burger is clicked, disable webpage scrolling and open the mobile menu */
