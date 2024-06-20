@@ -96,37 +96,15 @@
 <%# Header End %>
 
 <div class="mobile-drawer container">
-  <ul class="mobile-drawer-list">
-    <li class="mobile-drawer-list__item">
-      <a href="#">Figure</a>
-      <ul class="mobile-drawer-sublist">
-        <li class="mobile-drawer-list__item"><a href="">Pre-Order</a></li>
-        <li class="mobile-drawer-list__item"><a href="">In-Stock</a></li>
-      </ul>
-    </li>
-    <li class="mobile-drawer-list__item"><a href="#">Apparel</a></li>
-    <li class="mobile-drawer-list__item"><a href="#">Accessories</a></li>
-    <li class="mobile-drawer-list__item"><a href="#">Life Style</a></li>
-  </ul>
+  <%- include("list.ejs", {
+    items: [
+      ["Figures", ["Pre-Order", "In-Stock"]],
+      ["Apparel", ["Clothing", "Bags", "Shoes"]],
+      ["Accessories", ["Earrings", "Necklase"]],
+      ["Collectibles", ["Acrylics", "Keychains", "Plushies"]]
+    ],
+    className: "mobile-drawer-list",
+    itemClassName: "mobile-drawer-list__item",
+    sublistClassName: "mobile-drawer-sublist"
+  })  %>
 </div>
-
-<script defer>
-  const mobileNavIcon = document.querySelector(".mobile-menu-icon");
-
-  mobileNavIcon.addEventListener("click", () => {
-    const isOpened = mobileNavIcon.getAttribute("aria-expanded");
-    if (isOpened === "false") {
-      mobileNavIcon.setAttribute("aria-expanded", "true");
-      document.body.classList.toggle("mobile-drawer-open");
-    } else {
-      mobileNavIcon.setAttribute("aria-expanded", "false");
-      document.body.classList.toggle("mobile-drawer-open");
-    }
-  });
-
-  const navbar = document.querySelector("header");
-  window.addEventListener("scroll", () => {
-    // When the page is scrolling, apply class to nav
-    navbar.classList.toggle("window-scroll", window.scrollY > 0);
-  });
-</script>

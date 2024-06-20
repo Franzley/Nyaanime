@@ -1,0 +1,12 @@
+<ul class="<%= className %>">
+  <% items.forEach(item => { %>
+    <% if (Array.isArray(item)) { %>
+      <li class="<%= itemClassName %>">
+        <a href="#"><%= item[0] %></a>
+        <%- include("list.ejs", { items: item[1], className: sublistClassName, itemClassName: itemClassName }) %>
+      </li>
+    <% } else { %>
+      <li class="<%= itemClassName %>"><a href="#"><%= item %></a></li>
+    <% } %>
+  <% }); %>
+</ul>
