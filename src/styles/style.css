@@ -252,9 +252,9 @@ nav {
 .mobile-drawer-sublist {
 /* Take up the full width of grid */
   grid-column: span 2;
-  max-height: 0;
+  display: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: height 0.2s ease-out;
 }
 
 /* When burger is clicked, disable webpage scrolling and open the mobile menu */
