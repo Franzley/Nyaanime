@@ -265,6 +265,10 @@ nav {
 .mobile-drawer-open .mobile-drawer {
   display: block;
 }
+.drawer-search{
+  margin: 0;
+  border-radius: 5px;
+}
 
 /******************************/
 /*********  Accordion *********/
