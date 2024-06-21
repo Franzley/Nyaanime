@@ -201,6 +201,7 @@ nav {
   background: transparent;
   padding: 10px 15px 10px 10px;
   width: 100%;
+  font-size: var(--size-base);
 }
 .search-bar input {
   outline-color: var(--clr-cornflower);
