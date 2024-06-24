@@ -6,13 +6,13 @@ layout: "base.ejs"
 <section class="hero" id="banner">
   <%# When page reaches certain breakpoints, change image resolution %>
   <picture>
-    <source srcset="/images/hero-image-800.webp" media="(max-width: 800px)" />
+    <source srcset="./assets/images/hero-image-800.webp" media="(max-width: 800px)" />
     <source
-      srcset="./images/hero-image-1440.webp"
+      srcset="./assets/images/hero-image-1440.webp"
       media="(max-width: 1440px)"
     />
     <img
-      src="./images/hero-image-2560.webp"
+      src="./assets/images/hero-image-2560.webp"
       alt="landing image"
       width="2536"
       height="936"
@@ -35,10 +35,10 @@ layout: "base.ejs"
   <% for (let i=0; i<12; i++){ %>
   <a class="merchandise" href="#">
   <picture>
-    <source srcset="./images/Herrscher_Of_The_Void_Figure400.webp" media="(max-width: 800px)" />
+    <source srcset="./assets/images/Herrscher_Of_The_Void_Figure400.webp" media="(max-width: 800px)" />
     <img
       class="hp-test"
-      src="./images/Herrscher_Of_The_Void_Figure800.webp"
+      src="./assets/images/Herrscher_Of_The_Void_Figure800.webp"
       alt=""
       width="800"
       height="800"
