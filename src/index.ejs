@@ -32,13 +32,13 @@ layout: "base.ejs"
 
 <%# Merchandise section %>
 <section class="content container">
-  <% for (let i=0; i<12; i++){ %>
-  <a class="merchandise" href="#">
+  <% for (post of collections.merch){ %>
+  <a class="merchandise" href="<%= post.url %>">
   <picture>
-    <source srcset="./assets/images/Herrscher_Of_The_Void_Figure400.webp" media="(max-width: 800px)" />
+    <source srcset="<%= post.data.imageSM %>" media="(max-width: 800px)" />
     <img
       class="hp-test"
-      src="./assets/images/Herrscher_Of_The_Void_Figure800.webp"
+      src="<%= post.data.imageMD %>"
       alt=""
       width="800"
       height="800"
