@@ -3,17 +3,21 @@ layout: "base.ejs"
 ---
 
 <article class="container">
-    <div>
-        <h1>
-            <%= title %>
-        </h1>
-        <figure>
-            <img src="<%= imageSM %>" alt="<%= imageAlt %>">
-            <figcaption>
-                <%= imageAlt %>
-            </figcaption>
-        </figure>
-
-        <%- content %>
+  <div class="product">
+    <img class="product-image" src="<%= imageSM %>" alt="<%= imageAlt %>" />
+    <h1 class="product-title"><%= title %></h1>
+    <div class="product-price">
+      <span><%= price %></span>
     </div>
+    <form action="" class="purchasing-options">
+      <button class="quantity">Quantity</button>
+      <button class="add-to-cart">Add to Cart</button>
+    </form>
+    <div class="product-description">
+      <p><strong>Series: </strong><%= series %></p>
+      <p><strong>Character: </strong><%= character %></p>
+      <p><strong>Manufacturer: </strong><%= manufacturer %></p>
+      <p><strong>Product Type: </strong><%= productType %></p>
+    </div>
+  </div>
 </article>
