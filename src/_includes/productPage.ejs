@@ -2,6 +2,31 @@
 layout: "base.ejs"
 ---
 
+<div class="container">
+  <div class="breadcrumbs">
+    <ol class="breadcrumbs-list">
+      <li class="breadcrumbs-list__item">
+        <a href="/" aria-label="Go to homepage">
+          <span class="breadcrumbs-list__home">Home</span>
+          <span class="icon breadcrumbs-list__url">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="m 6 7 l 6 6 l 6 -6"></path>
+            </svg>
+          </span>
+        </a>
+      </li>
+      <li class="breadcrumbs-list__item">
+        <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
+      </li>
+    </ol>
+  </div>
+</div>
+
 <article class="container">
   <div class="product">
     <img class="product-image" src="<%= imageSM %>" alt="<%= imageAlt %>" />
@@ -10,7 +35,22 @@ layout: "base.ejs"
       <span><%= price %></span>
     </div>
     <form action="" class="purchasing-options">
-      <button class="quantity">Quantity</button>
+      <button aria-expanded="false" class="quantity-option">
+        <div class="quantity">
+          <label>Quantity</label>
+          <p>1</p>
+        </div>
+        <div class="icon">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path d="m 6 7 l 6 6 l 6 -6"></path>
+          </svg>
+        </div>
+      </button>
       <button class="add-to-cart">Add to Cart</button>
     </form>
     <div class="product-description">
