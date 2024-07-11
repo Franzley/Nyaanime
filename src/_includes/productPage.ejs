@@ -6,19 +6,19 @@ layout: "base.ejs"
   <div class="breadcrumbs">
     <ol class="breadcrumbs-list">
       <li class="breadcrumbs-list__item">
-        <a href="/" aria-label="Go to homepage">
-          <span class="breadcrumbs-list__home">Home</span>
-          <span class="icon breadcrumbs-list__url">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewbox="0 0 24 24"
-            >
-              <path d="m 6 7 l 6 6 l 6 -6"></path>
-            </svg>
-          </span>
+        <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
+          <span>Home</span>
         </a>
+        <span class="icon breadcrumbs-list__url">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path d="m 6 7 l 6 6 l 6 -6"></path>
+          </svg>
+        </span>
       </li>
       <li class="breadcrumbs-list__item">
         <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
