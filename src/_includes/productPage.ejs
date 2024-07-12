@@ -35,23 +35,43 @@ layout: "base.ejs"
       <span><%= price %></span>
     </div>
     <form action="" class="purchasing-options">
-      <button aria-expanded="false" class="quantity-option">
-        <div class="quantity">
-          <label>Quantity</label>
-          <p>1</p>
-        </div>
-        <div class="icon">
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewbox="0 0 24 24"
-          >
-            <path d="m 6 7 l 6 6 l 6 -6"></path>
-          </svg>
-        </div>
-      </button>
-      <button class="add-to-cart">Add to Cart</button>
+      <div class="quantity-wrapper">
+        <button type="button" aria-expanded="false"  aria-controls="quantity-select"
+        aria-label="Click to select quantity amount" class="quantity-option">
+          <div class="quantity">
+            <label>Quantity</label>
+            <p>1</p>
+          </div>
+          <div class="icon">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="m 6 7 l 6 6 l 6 -6"></path>
+            </svg>
+          </div>
+        </button>
+        <ul class="quantity-select">
+          <li class="quantity-select__option active" role="option" value="1">
+            <span>1</span>
+          </li>
+          <li class="quantity-select__option" role="option" value="2">
+            <span>2</span>
+          </li>
+          <li class="quantity-select__option" role="option" value="3">
+            <span>3</span>
+          </li>
+          <li class="quantity-select__option" role="option" value="4">
+            <span>4</span>
+          </li>
+          <li class="quantity-select__option" role="option" value="5">
+            <span>5</span>
+          </li>
+        </ul>
+      </div>
+      <button type="submit" class="add-to-cart">Add to Cart</button>
     </form>
     <div class="product-description">
       <p><strong>Series: </strong><%= series %></p>
