@@ -1,8 +1,62 @@
 ---
 title: Nyaanime - Shopping Cart
-permalink: 'cart/'
-layout: 'base.ejs'
+permalink: "cart/"
+layout: "base.ejs"
 ---
 
 
-<h1>Za Carto</h1>
+<div class="container">
+    <div class="breadcrumbs">
+      <ol class="breadcrumbs-list">
+        <li class="breadcrumbs-list__item">
+          <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
+            <span>Home</span>
+          </a>
+          <span class="icon breadcrumbs-list__url">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="m 6 7 l 6 6 l 6 -6"></path>
+            </svg>
+          </span>
+        </li>
+        <li class="breadcrumbs-list__item">
+          <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+<article class="container">
+  <h1>Shopping Cart</h1>
+  <p>Your cart is currently empty.</p>
+  <a href="/">Continue Shopping</a>
+
+  <div class="featured">
+    <h2>You might also like</h2>
+    <section class="content">
+      <% for (post of collections.featured){ %>
+      <a class="merchandise" href="<%= post.url %>">
+        <picture>
+          <source
+            srcset="<%= post.data.imageSM %>"
+            media="(max-width: 800px)"
+          />
+          <img
+            class="hp-test"
+            src="<%= post.data.imageMD %>"
+            alt=""
+            width="800"
+            height="800"
+            loading="lazy"
+          />
+        </picture>
+        <p><%= post.data.title %></p>
+      </a>
+      <%}%>
+    </section>
+  </div>
+</article>

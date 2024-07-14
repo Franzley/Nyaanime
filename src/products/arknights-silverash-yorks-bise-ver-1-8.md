@@ -9,4 +9,5 @@ series: ARKNIGHTS
 character: SilverAsh
 manufacturer: Good Smile Arts Shanghai
 productType: Figure
+tags: featured
 ---

@@ -9,4 +9,5 @@ series: The Legend of Heroes
 character: Altina Orion
 manufacturer: Good Smile Company
 productType: Figure
+tags: featured
 ---
