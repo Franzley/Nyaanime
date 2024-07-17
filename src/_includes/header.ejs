@@ -3,8 +3,8 @@
   <div id="navigation" class="container">
     <nav aria-label="navbar">
       <%# Logo %>
-      <a href="/" class="site-logo" aria-label="Go to homepage">
-        <img src="../assets/images/logo.webp" alt="site-logo" />
+      <a href="/" id="logo" aria-label="Go to homepage">
+        <img src="../assets/images/logo.webp" alt="logo" />
       </a>
       <%# Utility Icons %>
       <div class="utils">
@@ -74,6 +74,21 @@
     </nav>
   </div>
 
+<div class="container merchandise-category__nav">
+  <%- include("list.ejs", {
+    items: [
+      ["Figures", [["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]], "In-Stock"]],
+      ["Apparel", ["Clothing", "Bags", "Shoes"]],
+      ["Accessories", ["Earrings", "Necklase"]],
+      ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
+    ],
+    className: "merchandise-category__list",
+    itemClassName: "merchandise-category__item",
+    sublistClassName: "mobile-drawer-sublist",
+    isAccordion: true,
+  })  %>
+</div>
+
   <%# Search Bar %>
   <form class="search-bar">
     <button 
@@ -95,7 +110,7 @@
 </header>
 <%# Header End %>
 
-<div class="mobile-drawer container">
+<section class="mobile-drawer container">
   
   <form class="search-bar drawer-search">
     <button 
@@ -156,4 +171,4 @@
         </svg>
     </a>
   </div>
-</div>
+</section>

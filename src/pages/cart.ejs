@@ -4,40 +4,39 @@ permalink: "cart/"
 layout: "base.ejs"
 ---
 
-
 <div class="container">
-    <div class="breadcrumbs">
-      <ol class="breadcrumbs-list">
-        <li class="breadcrumbs-list__item">
-          <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
-            <span>Home</span>
-          </a>
-          <span class="icon breadcrumbs-list__url">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewbox="0 0 24 24"
-            >
-              <path d="m 6 7 l 6 6 l 6 -6"></path>
-            </svg>
-          </span>
-        </li>
-        <li class="breadcrumbs-list__item">
-          <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
-        </li>
-      </ol>
-    </div>
+  <div class="breadcrumbs">
+    <ol class="breadcrumbs-list">
+      <li class="breadcrumbs-list__item">
+        <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
+          <span>Home</span>
+        </a>
+        <span class="icon breadcrumbs-list__url">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewbox="0 0 24 24"
+          >
+            <path d="m 6 7 l 6 6 l 6 -6"></path>
+          </svg>
+        </span>
+      </li>
+      <li class="breadcrumbs-list__item">
+        <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
+      </li>
+    </ol>
   </div>
 
-<article class="container cart">
-  <h1>Shopping Cart</h1>
-  <p>Your cart is currently empty.</p>
-  <a href="/">Continue Shopping</a>
+  <article class="cart">
+    <h1>Shopping Cart</h1>
+    <p>Your cart is currently empty.</p>
+    <a href="/">Continue Shopping</a>
+  </article>
 
-  <div class="featured">
-    <h2>You might also like</h2>
-    <section class="content">
+  <section class="featured">
+    <h2>You may also like</h2>
+    <section class="merchandise-collection">
       <% for (post of collections.featured){ %>
       <a class="merchandise" href="<%= post.url %>">
         <picture>
@@ -58,5 +57,5 @@ layout: "base.ejs"
       </a>
       <%}%>
     </section>
-  </div>
-</article>
+  </section>
+</div>

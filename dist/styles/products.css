@@ -1,10 +1,6 @@
 .product{
     margin-top: 3rem;
 }
-
-.product h1{
-    font-size: clamp(1.75rem, 1.6397rem + 0.4902vw, 1.875rem);
-}
 .product-title{
     margin-top: 1.875rem;
     text-align: center;
@@ -106,35 +102,3 @@
     transform: translateY(-6px);
     display: inline-block;
 }
-
-
-@media (min-width: 768px) {
-    .breadcrumbs-list{
-        display: flex;
-    }
-
-    .product{
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        width: 85%;
-        margin-top: 1rem;
-    }
-    .product-left{
-        width: 50%;
-    }
-    .product-right{
-        width: 50%;
-        padding-left: 60px;
-    }
-
-    .product-title {
-        margin-top: 0;
-        text-align: left;
-    }
-    .product-price{
-        text-align: left;
-    }
-}
-
-

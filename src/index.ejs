@@ -3,7 +3,7 @@ title: Nyaanime Shop Anime Merch
 layout: "base.ejs"
 ---
 
-<section class="hero" id="banner">
+<section id="banner">
   <%# When page reaches certain breakpoints, change image resolution %>
   <picture>
     <source srcset="./assets/images/hero-image-800.webp" media="(max-width: 800px)" />
@@ -22,16 +22,13 @@ layout: "base.ejs"
   </picture>
 
   <div class="container">
-    <h1>
-      Unleash Your <br />
-      Inner Otaku <br />
-    </h1>
+    <h1>Unleash Your <br />Inner Otaku <br /></h1>
     <h2><strong>Shop Now</strong></h2>
   </div>
 </section>
 
 <%# Merchandise section %>
-<section class="content container">
+<section class="merchandise-collection container">
   <% for (post of collections.merch){ %>
   <a class="merchandise" href="<%= post.url %>">
   <picture>

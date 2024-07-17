@@ -1,24 +1,19 @@
 <footer>
-  <div class="footer container">
+  <div id="footer" class="container">
     <%- include("list.ejs", {
       items: [
         "About Us",
         "Contact Us",
         "Terms",
         "Privacy",
+        "Refund Policy",
+        "Shipping Policy"
       ],
       className: "footer-links",
       itemClassName: "footer-links__items",
     })  %>
 
-    <%- include("list.ejs", {
-      items: [
-        "Refund Policy",
-        "Shipping Policy",
-      ],
-      className: "footer-links",
-      itemClassName: "footer-links__items",
-    })  %>
+
   </div>
   <div class="container acknowledgment"><small>Website Coded by Franzley Bonhomme</small></div>
 </footer>
