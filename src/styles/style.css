@@ -475,4 +475,24 @@ footer {
   .merchandise-category__nav{
     display: block;
   }
+  .window-scroll #navigation {
+    position: static;
+    box-shadow: 0 0 0;
+  }
+  .window-scroll  .merchandise-category__nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 5px #2b2929;
+    z-index: 102;
+  }
+  .window-scroll  #banner{
+    margin-top: 47.972px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    --padding: 3.75rem;
+  }
 }
