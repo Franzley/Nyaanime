@@ -83,7 +83,12 @@ button {
   background: none;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
 }
 
@@ -91,7 +96,7 @@ h1 {
   font-size: clamp(var(--size-2xl), 1.2885rem + 2.25vw, var(--size-5xl));
 }
 h2 {
-    font-size: clamp(var(--size-xl), 1.2885rem + 2.25vw, var(--size-4xl));
+  font-size: clamp(var(--size-xl), 1.2885rem + 2.25vw, var(--size-4xl));
 }
 h3 {
   font-size: var(--size-lg);
@@ -116,7 +121,6 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /******************************/
 /**********  ICONS   **********/
@@ -384,14 +388,14 @@ footer {
   right: -7.5px;
   height: 15px;
 }
-.acknowledgment{
+.acknowledgment {
   margin-top: 0.25rem;
 }
 
 /******************************/
 /********  Component  *********/
 /******************************/
-.rounded-border-box{
+.rounded-border-box {
   border: 1px solid #cccccc;
   width: 100%;
   border-radius: 25px;
@@ -399,47 +403,43 @@ footer {
   margin-bottom: 15px;
 }
 
-.featured{
+.featured {
   margin-top: 2.25rem;
-    text-align: center;
+  text-align: center;
 }
 
-.hide{
+.hide {
   display: none;
 }
-
 
 /******************************/
 /**********  Merch  ***********/
 /******************************/
 
-
-.merchandise-category__nav{
+.merchandise-category__nav {
   background: #f4f6f8;
   display: none;
 }
-.merchandise-category__list{
+.merchandise-category__list {
   display: flex;
   gap: 2.25rem;
 }
-.merchandise-category__item{
+.merchandise-category__item {
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   align-items: center;
 }
-.merchandise-category__item a{
+.merchandise-category__item a {
   text-decoration: none;
 }
-.merchandise-category__item .accordion-trigger::before{
+.merchandise-category__item .accordion-trigger::before {
   border-left: none;
 }
-
 
 /******************************/
 /********* MQueries ***********/
 /******************************/
-
 
 @media (min-width: 768px) {
   .container {
@@ -458,7 +458,7 @@ footer {
     margin-top: 1.5rem;
   }
 
-  .featured .merchandise-collection{
+  .featured .merchandise-collection {
     grid-template-columns: 1fr 1fr;
     width: 700px;
     margin-left: auto;
@@ -467,13 +467,13 @@ footer {
 }
 
 @media (min-width: 940px) {
-  header .search-bar{
+  header .search-bar {
     display: none;
   }
-  .mobile-menu-icon{
+  .mobile-menu-icon {
     display: none;
   }
-  .merchandise-category__nav{
+  .merchandise-category__nav {
     display: flex;
     padding-bottom: 0.25rem;
     padding-top: 0.25rem;
@@ -482,19 +482,46 @@ footer {
     position: static;
     box-shadow: 0 0 0;
   }
-  .window-scroll  .merchandise-category__nav{
+  .window-scroll .merchandise-category__nav {
     position: fixed;
     top: 0;
     left: 0;
     box-shadow: 0px 1px 5px #2b2929;
     z-index: 102;
   }
-  .window-scroll  .merchandise-category__nav .utils{
+  .window-scroll .merchandise-category__nav .utils {
     display: block;
   }
-  .window-scroll  #banner{
+  .window-scroll #banner {
     margin-top: 47.972px;
   }
+
+  .merchandise-category__item {
+    position: relative;
+  }
+  .mobile-drawer-sublist {
+    /* test */
+    display: block;
+    position: absolute;
+    background: var(--clr-white);
+    padding: 0.5rem 0;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    top: 100%;
+    left: 0;
+  }
+
+  .merchandise-category__item:hover > .mobile-drawer-sublist {
+    display: block;
+  }
+
+  .mobile-drawer-sublist a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--clr-txt);
+  }
+  
 }
 
 @media (min-width: 1400px) {
