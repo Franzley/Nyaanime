@@ -138,3 +138,12 @@
 }
 
 
+@media (min-width: 1250px) {
+    .product{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        margin-top: 1rem;
+    }
+}

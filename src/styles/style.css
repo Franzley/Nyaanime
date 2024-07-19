@@ -404,13 +404,16 @@ footer {
     text-align: center;
 }
 
-
-
-
-
-.widescreen-container form{
+.hide{
   display: none;
 }
+
+
+/******************************/
+/**********  Merch  ***********/
+/******************************/
+
+
 .merchandise-category__nav{
   background: #f4f6f8;
   display: none;
@@ -418,8 +421,6 @@ footer {
 .merchandise-category__list{
   display: flex;
   gap: 2.25rem;
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
 }
 .merchandise-category__item{
   padding-left: 1rem;
@@ -473,7 +474,9 @@ footer {
     display: none;
   }
   .merchandise-category__nav{
-    display: block;
+    display: flex;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
   }
   .window-scroll #navigation {
     position: static;
@@ -485,6 +488,9 @@ footer {
     left: 0;
     box-shadow: 0px 1px 5px #2b2929;
     z-index: 102;
+  }
+  .window-scroll  .merchandise-category__nav .utils{
+    display: block;
   }
   .window-scroll  #banner{
     margin-top: 47.972px;
