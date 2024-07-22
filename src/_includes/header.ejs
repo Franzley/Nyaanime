@@ -7,6 +7,21 @@
         <img src="../assets/images/logo.webp" alt="logo" />
       </a>
 
+      <%# Desktop Only Search Bar %>
+      <form id="nav-searchbar-w" class="hide searchbar">
+        <button class="icon" aria-label="Search Button">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewbox="0 0 24 24"
+          >
+            <%- include("svgPaths.ejs", { pathName: 'search' }) %>
+          </svg>
+        </button>
+        <input type="text" placeholder="Search our store" />
+      </form>
+
       <%# Utility Icons %>
       <div class="utils">
         <%# Account %>
@@ -34,7 +49,8 @@
           </svg>
         </a>
       </div>
-      <%# Burger %>
+
+      <%# Burger Icon Mobile Only%>
       <button
         class="icon mobile-menu-icon"
         aria-expanded="false"
@@ -71,24 +87,25 @@
     </nav>
   </div>
 
-  <div class="container merchandise-category__nav">
+  <%# Desktop Only Navigation For Merchandise Categories %>
+  <div class="container desktop-categories-navigation">
     <%#
     <!-- prettier-ignore -->
     %>
-  <%- include("list.ejs", {
-    items: [
-      ["Figures", [["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]], "In-Stock"]],
-      ["Apparel", ["Clothing", "Bags", "Shoes"]],
-      ["Accessories", ["Earrings", "Necklase"]],
-      ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
-    ],
-    className: "merchandise-category__list",
-    itemClassName: "merchandise-category__item",
-    sublistClassName: "mobile-drawer-sublist",
-    isAccordion: true,
-  })  %>
+    <%- include("list.ejs", {
+      items: [
+        ["Figures", [["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]], "In-Stock"]],
+        ["Apparel", ["Clothing", "Bags", "Shoes"]],
+        ["Accessories", ["Earrings", "Necklase"]],
+        ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
+      ],
+      className: "merchandise-category__list",
+      itemClassName: "merchandise-category__item",
+      sublistClassName: "mobile-drawer-sublist",
+      isAccordion: true,
+    })  %>
 
-  <%# Utility Icons %>
+    <%# Utility Icons %>
     <div class="utils hide">
       <%# Account %>
       <a class="icon" href="../login/" aria-label="Go to User Profile">
@@ -117,8 +134,8 @@
     </div>
   </div>
 
-  <%# Search Bar %>
-  <form class="search-bar">
+  <%# Mobile Only Searchbar %>
+  <form id="nav-searchbar-s" class="searchbar">
     <button class="icon" aria-label="Search Button">
       <svg
         fill="none"
@@ -134,8 +151,9 @@
 </header>
 <%# Header End %>
 
+<!-- <%# Mobile Accessible Drawer %> -->
 <section class="mobile-drawer container">
-  <form class="search-bar drawer-search">
+  <form id="searchbar-drawer" class="searchbar">
     <button class="icon" aria-label="Search Button">
       <svg
         fill="none"
@@ -164,6 +182,7 @@
     sublistClassName: "mobile-drawer-sublist",
     isAccordion: true,
   })  %>
+
   <div class="socials-links">
     <a href="#" class="icon" aria-label="Instagram">
       <svg
