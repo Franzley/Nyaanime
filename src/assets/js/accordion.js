@@ -1,5 +1,6 @@
 const accordionTriggers = document.querySelectorAll(".accordion-trigger");
 
+// Accordion JS only works if device is less than 940px
 if (window.innerWidth < 940) {
   accordionTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {

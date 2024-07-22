@@ -223,6 +223,11 @@ nav {
   color: var(--clr-white);
 }
 
+.desktop-categories-navigation {
+  background: #f4f6f8;
+  display: none;
+}
+
 /******************************/
 /*******  Mobile-Drawer *******/
 /******************************/
@@ -239,7 +244,6 @@ nav {
   border-top: 1px solid rgb(231, 225, 225);
   padding-top: 0.375rem;
   padding-bottom: 1.25rem;
-  display: none;
   position: fixed;
   overflow: scroll;
 }
@@ -383,32 +387,6 @@ footer {
   margin-top: 0.25rem;
 }
 
-/******************************/
-/**********  Merch  ***********/
-/******************************/
-
-.desktop-categories-navigation {
-  background: #f4f6f8;
-  display: none;
-}
-.categories {
-  display: flex;
-  gap: 2.25rem;
-}
-.categories__item {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  align-items: center;
-}
-.categories__item a {
-  text-decoration: none;
-}
-.categories__item .accordion-trigger::before {
-  border-left: none;
-}
-
-
 
 
 /******************************/
@@ -534,6 +512,32 @@ footer {
     border: 1px solid blue;
     background: transparent;
     padding: 0;
+  }
+
+
+
+  .categories {
+    display: flex;
+    gap: 2.25rem;
+  }
+  .categories__item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .categories__item a {
+    text-decoration: none;
+  }
+  .categories__item .accordion-trigger::before {
+    border-left: none;
+  }
+  .sub-categories__item {
+    /* Take up the full width of grid */
+    grid-column: span 2;
+    display: none;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
   }
 }
 
