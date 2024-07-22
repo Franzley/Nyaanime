@@ -5,7 +5,7 @@ if (window.innerWidth < 940) {
     trigger.addEventListener("click", () => {
       const isOpened = trigger.getAttribute("aria-expanded");
       const subList = trigger.parentElement.querySelector(
-        ".mobile-drawer-sublist"
+        ".sub-categories__item"
       );
       if (isOpened === "false") {
         trigger.setAttribute("aria-expanded", "true");

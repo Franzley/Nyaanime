@@ -259,12 +259,12 @@ nav {
   padding-left: 5px;
   text-decoration: none;
 }
-.mobile-drawer-sublist .mobile-drawer-list__item {
+.sub-categories__item .mobile-drawer-list__item {
   border-bottom: none;
   padding-left: 15px;
 }
 /* Hide extra lists until user clicks arrow button */
-.mobile-drawer-sublist {
+.sub-categories__item {
   /* Take up the full width of grid */
   grid-column: span 2;
   display: none;
@@ -391,20 +391,20 @@ footer {
   background: #f4f6f8;
   display: none;
 }
-.merchandise-category__list {
+.categories {
   display: flex;
   gap: 2.25rem;
 }
-.merchandise-category__item {
+.categories__item {
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   align-items: center;
 }
-.merchandise-category__item a {
+.categories__item a {
   text-decoration: none;
 }
-.merchandise-category__item .accordion-trigger::before {
+.categories__item .accordion-trigger::before {
   border-left: none;
 }
 
@@ -502,10 +502,10 @@ footer {
     margin-top: 47.972px;
   }
 
-  .merchandise-category__item {
+  .categories__item {
     position: relative;
   }
-  .mobile-drawer-sublist {
+  .sub-categories__item {
     /* test */
     /* display: block; */
     position: absolute;
@@ -518,11 +518,11 @@ footer {
     left: 0;
   }
 
-  .merchandise-category__item:hover > .mobile-drawer-sublist {
+  .categories__item:hover > .sub-categories__item {
     display: block;
   }
 
-  .mobile-drawer-sublist a {
+  .sub-categories__item a {
     display: block;
     padding: 0.5rem 1rem;
     color: var(--clr-txt);
