@@ -93,12 +93,13 @@
     <!-- prettier-ignore -->
     %>
     <%- include("list.ejs", {
-      items: [
-        ["Figures", [["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]], "In-Stock"]],
-        ["Apparel", ["Clothing", "Bags", "Shoes"]],
-        ["Accessories", ["Earrings", "Necklase"]],
-        ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
-      ],
+    items: [
+      ["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]],
+      ["In-Stock", []],
+      ["Apparel", ["Clothing", "Bags", "Shoes"]],
+      ["Accessories", ["Earrings", "Necklase"]],
+      ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
+    ],
       className: "categories",
       itemClassName: "categories__item",
       sublistClassName: "sub-categories__item",
@@ -177,8 +178,8 @@
       ["Accessories", ["Earrings", "Necklase"]],
       ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
     ],
-    className: "mobile-drawer-list",
-    itemClassName: "mobile-drawer-list__item",
+    className: "categories",
+    itemClassName: "categories__item",
     sublistClassName: "sub-categories__item",
     isAccordion: true,
   })  %>

@@ -3,7 +3,7 @@
     <% if (Array.isArray(item)) { %>
       <li class="<%= itemClassName %>">
         <a href="#"><%= item[0] %></a>
-        <%if (isAccordion){%>
+        <%if (isAccordion && item[1].length != 0){%>
           <button 
             class="icon accordion-trigger"
             aria-expanded="false"
