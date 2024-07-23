@@ -9,4 +9,5 @@ series: Honkai Impact 3rd
 character: "Kiana, Mei, Bronya, Seele, Fu Hua, Herrscher of Sentience, Theresa, Elysia, Griseo, Sirin, Misteln, Susana, Li Sushang, Vill-V, Griseo, Natasha, Fischl, Himeko, Yae Sakura, Kallen"
 manufacturer: miHoyo
 productType: Sticker
+tags: featured
 ---

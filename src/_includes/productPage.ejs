@@ -3,116 +3,119 @@ layout: "base.ejs"
 script: quantity.js
 ---
 
-<div class="container">
-  <div class="breadcrumbs">
-    <ol class="breadcrumbs-list">
-      <li class="breadcrumbs-list__item">
-        <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
-          <span>Home</span>
-        </a>
-        <span class="icon breadcrumbs-list__url">
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewbox="0 0 24 24"
-          >
-            <path d="m 6 7 l 6 6 l 6 -6"></path>
-          </svg>
-        </span>
-      </li>
-      <li class="breadcrumbs-list__item">
-        <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
-      </li>
-    </ol>
-  </div>
-</div>
-
-<article class="container">
-  <div class="product">
-    <div class="product-left">
-      <img class="product-image" src="<%= imageSM %>" alt="<%= imageAlt %>" />
+<article class="webpage">
+  <div class="container">
+    <div class="breadcrumbs">
+      <ol class="breadcrumbs-list">
+        <li class="breadcrumbs-list__item">
+          <a class="breadcrumbs-list__home" href="/" aria-label="Go to homepage">
+            <span>Home</span>
+          </a>
+          <span class="icon breadcrumbs-list__url">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="m 6 7 l 6 6 l 6 -6"></path>
+            </svg>
+          </span>
+        </li>
+        <li class="breadcrumbs-list__item">
+          <a href="<%= page.url %>" aria-label="Go to homepage"> <%= title %> </a>
+        </li>
+      </ol>
     </div>
-    <div class="product-right">
-      <!-- <div class="product-right__container"> -->
-        <h1 class="product-title"><%= title %></h1>
-      <div class="product-price">
-        <span><%= price %></span>
+  </div>
+  
+  <article class="container">
+    <div class="product">
+      <div class="product-left">
+        <img class="product-image" src="<%= imageSM %>" alt="<%= imageAlt %>" />
       </div>
-      <form action="" class="purchasing-options">
-        <div class="quantity-wrapper">
-          <button type="button" aria-expanded="false"  aria-controls="quantity-select"
-          aria-label="Click to select quantity amount" class="quantity-option rounded-border-box">
-            <div class="quantity">
-              <label>Quantity</label>
-              <p>1</p>
-            </div>
-            <div class="icon">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewbox="0 0 24 24"
-              >
-                <path d="m 6 7 l 6 6 l 6 -6"></path>
-              </svg>
-            </div>
-          </button>
-          <ul class="quantity-select">
-            <li class="quantity-select__option active" role="option" value="1">
-              <span>1</span>
-            </li>
-            <li class="quantity-select__option" role="option" value="2">
-              <span>2</span>
-            </li>
-            <li class="quantity-select__option" role="option" value="3">
-              <span>3</span>
-            </li>
-            <li class="quantity-select__option" role="option" value="4">
-              <span>4</span>
-            </li>
-            <li class="quantity-select__option" role="option" value="5">
-              <span>5</span>
-            </li>
-          </ul>
+      <div class="product-right">
+        <!-- <div class="product-right__container"> -->
+          <h1 class="product-title"><%= title %></h1>
+        <div class="product-price">
+          <span><%= price %></span>
         </div>
-        <button type="submit" class="add-to-cart rounded-border-box">Add to Cart</button>
-      </form>
-      <div class="product-description">
-        <p><strong>Series: </strong><%= series %></p>
-        <p><strong>Character: </strong><%= character %></p>
-        <p><strong>Manufacturer: </strong><%= manufacturer %></p>
-        <p><strong>Product Type: </strong><%= productType %></p>
+        <form action="" class="purchasing-options">
+          <div class="quantity-wrapper">
+            <button type="button" aria-expanded="false"  aria-controls="quantity-select"
+            aria-label="Click to select quantity amount" class="quantity-option rounded-border-box">
+              <div class="quantity">
+                <label>Quantity</label>
+                <p>1</p>
+              </div>
+              <div class="icon">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="m 6 7 l 6 6 l 6 -6"></path>
+                </svg>
+              </div>
+            </button>
+            <ul class="quantity-select">
+              <li class="quantity-select__option active" role="option" value="1">
+                <span>1</span>
+              </li>
+              <li class="quantity-select__option" role="option" value="2">
+                <span>2</span>
+              </li>
+              <li class="quantity-select__option" role="option" value="3">
+                <span>3</span>
+              </li>
+              <li class="quantity-select__option" role="option" value="4">
+                <span>4</span>
+              </li>
+              <li class="quantity-select__option" role="option" value="5">
+                <span>5</span>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="add-to-cart rounded-border-box">Add to Cart</button>
+        </form>
+        <div class="product-description">
+          <p><strong>Series: </strong><%= series %></p>
+          <p><strong>Character: </strong><%= character %></p>
+          <p><strong>Manufacturer: </strong><%= manufacturer %></p>
+          <p><strong>Product Type: </strong><%= productType %></p>
+        </div>
+        <!-- </div> -->
       </div>
-      <!-- </div> -->
     </div>
-  </div>
+  </article>
+  
+  <section class="featured container">
+    <h2>You may also like</h2>
+    <section class="merchandise-collection">
+      <% for (post of collections.featured){ %>
+      <a class="merchandise" href="<%= post.url %>">
+        <picture>
+          <source
+            srcset="<%= post.data.imageSM %>"
+            media="(max-width: 800px)"
+          />
+          <img
+            class="hp-test"
+            src="<%= post.data.imageMD %>"
+            alt=""
+            width="800"
+            height="800"
+            loading="lazy"
+          />
+        </picture>
+        <p><%= post.data.title %></p>
+      </a>
+      <%}%>
+    </section>
+  </section>
 </article>
 
-<section class="featured container">
-  <h2>You may also like</h2>
-  <section class="merchandise-collection">
-    <% for (post of collections.featured){ %>
-    <a class="merchandise" href="<%= post.url %>">
-      <picture>
-        <source
-          srcset="<%= post.data.imageSM %>"
-          media="(max-width: 800px)"
-        />
-        <img
-          class="hp-test"
-          src="<%= post.data.imageMD %>"
-          alt=""
-          width="800"
-          height="800"
-          loading="lazy"
-        />
-      </picture>
-      <p><%= post.data.title %></p>
-    </a>
-    <%}%>
-  </section>
-</section>
 
 
 

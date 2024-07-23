@@ -9,4 +9,5 @@ series: Genshin Impact
 character: HuTao
 manufacturer: Apex Innovation
 productType: Mini Figure
+tags: featured
 ---

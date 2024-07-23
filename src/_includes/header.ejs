@@ -88,50 +88,52 @@
   </div>
 
   <%# Desktop Only Navigation For Merchandise Categories %>
-  <div class="container desktop-categories-navigation">
-    <%#
-    <!-- prettier-ignore -->
-    %>
-    <%- include("list.ejs", {
-    items: [
-      ["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]],
-      ["In-Stock", []],
-      ["Apparel", ["Clothing", "Bags", "Shoes"]],
-      ["Accessories", ["Earrings", "Necklase"]],
-      ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
-    ],
-      className: "categories",
-      itemClassName: "categories__item",
-      sublistClassName: "sub-categories__item",
-      isAccordion: true,
-    })  %>
-
-    <%# Utility Icons %>
-    <div class="utils hide">
-      <%# Account %>
-      <a class="icon" href="../login/" aria-label="Go to User Profile">
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          viewbox="0 0 24 24"
-        >
-          <circle cx="12" cy="7" r="5"></circle>
-          <%- include("svgPaths.ejs", { pathName: 'account' }) %>
-        </svg>
-      </a>
-      <%# Cart %>
-      <a class="icon cart-icon" href="../cart/" aria-label="Go to cart">
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.5"
-          viewbox="0 0 24 24"
-        >
-          <%- include("svgPaths.ejs", { pathName: 'cart' }) %>
-          <span class="cart-count">0</span>
-        </svg>
-      </a>
+  <div class="desktop-categories-navigation">
+    <div class="container flex">
+      <%#
+      <!-- prettier-ignore -->
+      %>
+      <%- include("list.ejs", {
+      items: [
+        ["Pre-Order", ["Kiana Kaslana", "Honkai Impact 3rd", "Arknights", "Honkai Star Rail", "Genshin Impact"]],
+        ["In-Stock", []],
+        ["Apparel", ["Clothing", "Bags", "Shoes"]],
+        ["Accessories", ["Earrings", "Necklase"]],
+        ["Collectibles", ["Acrylics", "Keychains", "Plushies", "Electronics"]],
+      ],
+        className: "categories",
+        itemClassName: "categories__item",
+        sublistClassName: "sub-categories__item",
+        isAccordion: true,
+      })  %>
+  
+      <%# Utility Icons %>
+      <div class="utils hide">
+        <%# Account %>
+        <a class="icon" href="../login/" aria-label="Go to User Profile">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            viewbox="0 0 24 24"
+          >
+            <circle cx="12" cy="7" r="5"></circle>
+            <%- include("svgPaths.ejs", { pathName: 'account' }) %>
+          </svg>
+        </a>
+        <%# Cart %>
+        <a class="icon cart-icon" href="../cart/" aria-label="Go to cart">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            viewbox="0 0 24 24"
+          >
+            <%- include("svgPaths.ejs", { pathName: 'cart' }) %>
+            <span class="cart-count">0</span>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 

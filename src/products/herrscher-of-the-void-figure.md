@@ -9,4 +9,5 @@ series: Honkai Impact 3rd
 character: Kiana Kaslana
 manufacturer: miHoyo
 productType: Figure
+tags: featured
 ---

@@ -120,6 +120,7 @@ h6 {
   padding: 0 var(--padding);
   margin-left: auto;
   margin-right: auto;
+  max-width: 1600px;
 }
 
 /******************************/
@@ -402,6 +403,9 @@ footer {
   opacity: 0.8;
 }
 
+.flex{
+  display: flex;
+}
 .hide {
   display: none;
 }
@@ -423,12 +427,6 @@ footer {
     margin-bottom: 5rem;
     margin-top: 1.5rem;
   }
-  .featured .merchandise-collection {
-    grid-template-columns: 1fr 1fr;
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media (min-width: 940px) {
@@ -437,9 +435,10 @@ footer {
     display: none;
   }
   .desktop-categories-navigation {
-    display: flex;
+    display: block;
     padding-bottom: 0.25rem;
     padding-top: 0.25rem;
+    width: 100%;
   }
   .window-scroll #navigation {
     position: static;
@@ -458,6 +457,9 @@ footer {
   .window-scroll #banner {
     margin-top: 47.972px;
   }
+  .window-scroll .webpage {
+    margin-top: 47.972px;
+  }
   #nav-searchbar-w {
     display: flex;
     flex-grow: 1;
@@ -470,6 +472,12 @@ footer {
     display: flex;
     gap: 2.25rem;
     margin: 0;
+  }
+  .categories > .categories__item:first-child{
+    padding-left: 0;
+  }
+  .categories > .categories__item:first-child > a{
+    padding-left: 0;
   }
   .categories__item {
     position: relative;
