@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "src/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Mobile Image", name: "imageSM", widget: "image" }
+      - { label: "Desktop Image", name: "imageMD", widget: "image" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Series", name: "series", widget: "string" }
+      - { label: "Character", name: "character", widget: "string" }
+      - { label: "Manufacturer", name: "manufacturer", widget: "string" }
+      - { label: "Product Type", name: "productType", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["merch"] }
+      - { label: "Body", name: "body", widget: "markdown" }
