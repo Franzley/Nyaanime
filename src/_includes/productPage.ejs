@@ -32,7 +32,16 @@ script: quantity.js
   <article class="container">
     <div class="product">
       <div class="product-left">
-        <img class="product-image" src="<%= imageSM %>" alt="<%= imageAlt %>" />
+        <picture>
+          <source srcset="<%= imageSM %>" media="(max-width: 800px)" />
+          <img
+            src="<%= imageMD %>"
+            alt="<%= post.data.imageAlt %>"
+            width="800"
+            height="800"
+            loading="lazy"
+          />
+        </picture>
       </div>
       <div class="product-right">
         <!-- <div class="product-right__container"> -->
