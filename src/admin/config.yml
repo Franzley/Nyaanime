@@ -13,10 +13,10 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Mobile Image", name: "imageSM", widget: "image" }
       - { label: "Desktop Image", name: "imageMD", widget: "image" }
+      - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
       - { label: "Price", name: "price", widget: "string" }
       - { label: "Series", name: "series", widget: "string" }
       - { label: "Character", name: "character", widget: "string" }
       - { label: "Manufacturer", name: "manufacturer", widget: "string" }
       - { label: "Product Type", name: "productType", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["merch"] }
-      - { label: "Body", name: "body", widget: "markdown" }
